@@ -1,11 +1,10 @@
-import { Button } from "@mui/material";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div>
-      <h1>Hellow</h1>
-      <Button variant="contained">Hello World</Button>
-    </div>
+    <>
+      <Header></Header>
+    </>
   );
 }
 
