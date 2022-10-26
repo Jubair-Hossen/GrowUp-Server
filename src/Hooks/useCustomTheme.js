@@ -3,7 +3,7 @@ import { amber, deepOrange } from '@mui/material/colors';
 import React from 'react';
 
 const useCustomTheme = () => {
-    const [mode, setMode] = React.useState(localStorage.getItem('mode') || 'dark');
+    const [mode, setMode] = React.useState(localStorage.getItem('mode') || 'light');
 
     const colorMode = React.useMemo(
         () => ({
