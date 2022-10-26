@@ -155,7 +155,7 @@ const Header = () => {
                             <Button
                                 key={page}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: 'text.secondary', display: 'block' }}
                             >
                                 {page}
                             </Button>
@@ -204,7 +204,7 @@ const Header = () => {
                                 </Menu>
                             </>
                                 :
-                                <Button variant="contained" color='secondary'>Singin</Button>
+                                <Button variant="contained" color='secondary' size='small'>Singin</Button>
                         }
                     </Box>
                 </Toolbar>
