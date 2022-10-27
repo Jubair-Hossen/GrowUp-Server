@@ -1,14 +1,12 @@
 import { Fade, Switch, Typography } from '@mui/material';
 import React from 'react';
 import { ColorModeContext } from '../App';
-import Header from './Header';
 
 const Mode = () => {
     const colorMode = React.useContext(ColorModeContext);
 
     return (
         <>
-            <Header></Header>
             <Switch onClick={colorMode.toggleColorMode}>Mode</Switch>
             <Fade in={true} timeout={1000}>
                 <Typography
