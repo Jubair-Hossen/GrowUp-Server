@@ -7,6 +7,9 @@ const Hero = () => {
             justifyContent="center"
             alignItems="center"
             mb={2}
+            maxWidth='xl'
+            mx='auto'
+            px={1}
             component='section'
             direction={{ xs: 'column', sm: 'row' }} >
             <Box sx={{ width: { xs: '100%', md: '70%' } }}>
@@ -14,16 +17,16 @@ const Hero = () => {
                     variant='h1'
                     color='text.primary'
                 >
-                    Start Your <Box component="span" color="primary.text">Bussiness</Box> Today!
+                    Start T-shirt <Box component="span" color="primary.text">Bussiness</Box> Without Fund!
                 </Typography>
                 <Typography
                     my={3}
-                    variant='h6'
+                    component='p'
                     color='text.primary'
                 >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem adipisci dignissimos cupiditate, labore nisi mollitia odit assumenda officiis eum.
                 </Typography>
-                <Button variant='contained'>Start Now</Button>
+                <Button variant='contained' sx={{ color: 'text.secondary' }}>Get Started</Button>
             </Box>
             <Box>
                 <CardMedia

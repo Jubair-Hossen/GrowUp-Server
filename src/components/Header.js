@@ -36,6 +36,9 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
+    '& .MuiInputBase-root': {
+        width: '100%',
+    },
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
         // vertical padding + font size from searchIcon
@@ -97,7 +100,7 @@ const Header = () => {
                             LOGO
                         </Typography>
 
-                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                        <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
                             <IconButton
                                 size="large"
                                 aria-label="account of current user"
@@ -124,11 +127,25 @@ const Header = () => {
                                 onClose={handleCloseNavMenu}
                                 sx={{
                                     display: { xs: 'block', md: 'none' },
+                                    '& .MuiPaper-root': {
+                                        mt: { xs: 1, sm: 2 },
+                                        boxShadow: 0,
+                                        bgcolor: 'primary.main',
+                                        width: 200,
+                                    },
                                 }}
                             >
                                 {pages.map((page) => (
                                     <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">{page}</Typography>
+                                        <Button
+                                            component={Link}
+                                            to={`/${page}`}
+                                            key={page}
+                                            onClick={handleCloseNavMenu}
+                                            sx={{ color: 'text.secondary', display: 'block' }}
+                                        >
+                                            {page}
+                                        </Button>
                                     </MenuItem>
                                 ))}
                             </Menu>

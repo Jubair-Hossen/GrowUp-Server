@@ -3,7 +3,7 @@ import { Box, Grid, Paper, styled, Typography } from '@mui/material';
 import { Login, CheckCircle, Sell, MonetizationOn, } from '@mui/icons-material';
 
 
-const WeWorks = () => {
+const Categories = () => {
     const cards = [
         {
             title: "Singin or Singup",
@@ -41,13 +41,13 @@ const WeWorks = () => {
     }));
     return (
         <Box component='section'
-            mb={18}
+            mb={12}
             mx='auto'
             maxWidth='xl'
             px={1}
         >
             <Typography sx={{ textAlign: 'center', color: 'primary.text' }} variant='h3'>
-                How we work
+                Our Categories
             </Typography>
             <Typography
                 sx={{
@@ -78,4 +78,4 @@ const WeWorks = () => {
     );
 };
 
-export default WeWorks;
+export default Categories;

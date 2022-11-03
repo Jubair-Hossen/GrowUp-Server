@@ -42,7 +42,7 @@ const useCustomTheme = () => {
                 : {
                     // palette values for dark mode
                     primary: {
-                        main: '#333',
+                        main: '#292c44',
                         text: '#38B1ED'
                     },
                     secondary: {
@@ -61,14 +61,18 @@ const useCustomTheme = () => {
         },
         typography: {
             h1: {
-                fontSize: '5rem',
+                fontSize: '4rem',
                 fontWeight: 800,
                 '@media (max-width:900px)': {
-                    fontSize: '3rem',
-                },
-                '@media (max-width:600px)': {
                     fontSize: '2.5rem',
                 },
+                '@media (max-width:600px)': {
+                    fontSize: '1.5rem',
+                },
+            },
+            h6: {
+                fontSize: '1rem',
+                fontWeight: 400,
             }
         }
     });
