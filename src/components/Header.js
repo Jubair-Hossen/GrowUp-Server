@@ -57,7 +57,7 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
 const Header = () => {
-    const [isLodedIn] = useState(false);
+    const [isLodedIn] = useState(true);
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 

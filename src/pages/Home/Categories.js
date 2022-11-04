@@ -1,6 +1,10 @@
 import React from 'react';
-import { Box, Grid, Paper, styled, Typography } from '@mui/material';
+import "swiper/css";
+import "swiper/css/pagination";
+import { Box, Paper, styled, Typography } from '@mui/material';
 import { Login, CheckCircle, Sell, MonetizationOn, } from '@mui/icons-material';
+import { Autoplay, Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 
 const Categories = () => {
@@ -30,7 +34,7 @@ const Categories = () => {
         backgroundColor: theme.palette.background.default,
         padding: theme.spacing(1),
         textAlign: 'center',
-        // height: 270,
+        height: 270,
         // [theme.breakpoints.down('sm')]: {
         //     height: 'auto'
         // },
@@ -57,11 +61,37 @@ const Categories = () => {
                 component='p'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugit atque, saepe repudiandae laborum non sequi porro animi hic similique?
             </Typography>
-            <Grid container spacing={2}>
+            <Swiper
+                breakpoints={{
+                    200: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    }
+                }}
+                spaceBetween={30}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper"
+            >
                 {
                     cards.map(card => (
-                        <Grid item xs={12} sm={6} lg={3}>
-                            <Item elevation={1}>
+                        <SwiperSlide>
+                            <Item>
                                 {card.icon}
                                 <Typography component='p' fontSize={26} my={1}>
                                     {card.title}
@@ -70,10 +100,17 @@ const Categories = () => {
                                     {card.text}
                                 </Typography>
                             </Item>
-                        </Grid>
+                        </SwiperSlide>
                     ))
                 }
-            </Grid>
+                <SwiperSlide><Item>slide 4</Item></SwiperSlide>
+                <SwiperSlide><Item>slide 5</Item></SwiperSlide>
+                <SwiperSlide><Item>slide 6</Item></SwiperSlide>
+                <SwiperSlide><Item>slide 7</Item></SwiperSlide>
+                <SwiperSlide><Item>slide 8</Item></SwiperSlide>
+                <SwiperSlide><Item>slide 9</Item></SwiperSlide>
+                <SwiperSlide><Item>slide 10</Item></SwiperSlide>
+            </Swiper>
         </Box>
     );
 };
