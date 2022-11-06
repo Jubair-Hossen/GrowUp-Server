@@ -1,5 +1,6 @@
 import { Box } from '@mui/material';
 import React from 'react';
+import ImageUpload from '../../components/ImageUpload';
 import Categories from './Categories';
 import Customize from './Customize';
 import Hero from './Hero';
@@ -14,6 +15,7 @@ const Home = () => {
             <Customize />
             <Categories />
             <PropularProducts />
+            <ImageUpload />
         </Box>
     );
 };

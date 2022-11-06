@@ -83,6 +83,7 @@ const PropularProducts = () => {
                 pagination={{
                     clickable: true,
                 }}
+                slidesPerGroup={3}
                 navigation={true}
                 modules={[Grid, Autoplay, Pagination, Navigation]}
                 className="mySwiper"

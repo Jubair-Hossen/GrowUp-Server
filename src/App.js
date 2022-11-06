@@ -6,6 +6,8 @@ import Mode from "./components/Mode";
 import Home from "./pages/Home/Home";
 import Navigation from "./components/Navigation";
 import NotFound from "./pages/NotFound";
+import Layout from "./pages/AdminDeshboard/Layout";
+import Overview from "./pages/AdminDeshboard/Overview";
 
 export const ColorModeContext = React.createContext();
 
@@ -22,6 +24,28 @@ const router = createBrowserRouter([
       {
         path: "mode",
         element: <Mode />
+      },
+      {
+        path: "Products",
+        element: <Mode />
+      },
+      {
+        path: "Admin",
+        element: <Layout />,
+        children: [
+          {
+            path: "/Admin",
+            element: <Overview />
+          },
+          {
+            path: "/Admin/Overview",
+            element: <Overview />
+          },
+          {
+            path: "/Admin/Products",
+            element: <Overview />
+          },
+        ]
       }
     ]
   }

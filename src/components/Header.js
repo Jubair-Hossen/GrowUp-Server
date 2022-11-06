@@ -6,7 +6,9 @@ import { styled, alpha } from '@mui/material/styles';
 import * as React from 'react';
 import { useState } from 'react';
 import HideOnScroll from './HideOnScroll';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
+import useCustomTheme from '../Hooks/useCustomTheme';
+import { Scale } from '@mui/icons-material';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -74,6 +76,11 @@ const Header = () => {
 
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
+    };
+
+    let activeStyle = {
+        backgroundColor: '#0A1929',
+        transition: '2s'
     };
     return (
         <HideOnScroll>
@@ -169,14 +176,18 @@ const Header = () => {
                         >
                             LOGO
                         </Typography>
+                        {/* desktop Menu here */}
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             {pages.map((page) => (
                                 <Button
-                                    component={Link}
+                                    component={NavLink}
                                     to={`/${page}`}
                                     key={page}
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'text.secondary', display: 'block' }}
+                                    style={({ isActive }) =>
+                                        isActive ? activeStyle : undefined
+                                    }
                                 >
                                     {page}
                                 </Button>
