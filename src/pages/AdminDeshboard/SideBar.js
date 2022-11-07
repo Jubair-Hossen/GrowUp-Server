@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Avatar, Box, Button, Divider, Stack, Typography } from '@mui/material';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -10,10 +10,20 @@ const SideBar = () => {
         transition: '0.3s'
     };
     return (
-        <Box width={'20%'}
+        <Box width={{ xs: '30%', md: '20%' }}
             minHeight={'80vh'}
             sx={{ backgroundColor: 'background.default', p: 2, borderRadius: 3 }}
         >
+            <Stack
+                direction='row'
+                spacing={2}
+                alignItems='center'
+                mb={2}
+            >
+                <Avatar alt="Jemy Sharp" src="/static/images/avatar/1.jpg" />
+                <Typography color='text.primary'>Jubair Hossen</Typography>
+            </Stack>
+            <Divider />
             {
                 AdminPages.map((page) => (
                     <Button

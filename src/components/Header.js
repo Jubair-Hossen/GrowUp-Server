@@ -53,7 +53,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-const pages = ['Products', 'Pricing', 'Blog', 'Orders', 'Categories', 'mode'];
+const pages = ['Products', 'Admin', 'Blog', 'Orders', 'Categories', 'mode'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 

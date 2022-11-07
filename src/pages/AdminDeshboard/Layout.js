@@ -4,13 +4,14 @@ import { Outlet } from 'react-router-dom';
 import SideBar from './SideBar';
 
 const Layout = () => {
+    window.scrollTo(0, 0)
     return (
         <Stack
             maxWidth={'xl'}
             direction='row'
             spacing={4}
             mx='auto'
-            p={2}
+            p={1}
         >
             <SideBar />
             <Outlet />

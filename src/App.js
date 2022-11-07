@@ -7,7 +7,9 @@ import Home from "./pages/Home/Home";
 import Navigation from "./components/Navigation";
 import NotFound from "./pages/NotFound";
 import Layout from "./pages/AdminDeshboard/Layout";
-import Overview from "./pages/AdminDeshboard/Overview";
+import Overview from "./pages/AdminDeshboard/Overview/Overview";
+import Categories from "./pages/AdminDeshboard/Category/Categories";
+import AddCategory from "./pages/AdminDeshboard/Category/AddCategory";
 
 export const ColorModeContext = React.createContext();
 
@@ -40,6 +42,16 @@ const router = createBrowserRouter([
           {
             path: "/Admin/Overview",
             element: <Overview />
+          },
+          {
+            path: "/Admin/Categories",
+            element: <Categories />,
+            children: [
+              {
+                path: "/Admin/Categories/add-new",
+                element: <AddCategory />
+              },
+            ]
           },
           {
             path: "/Admin/Products",
