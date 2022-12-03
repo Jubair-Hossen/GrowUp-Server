@@ -45,7 +45,6 @@ const PropularProducts = () => {
     }));
     return (
         <Box component='section'
-            mb={12}
             mx='auto'
             maxWidth='xl'
             px={1}

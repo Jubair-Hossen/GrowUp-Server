@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <Box sx={{ backgroundColor: 'primary.main', padding: 3 }}>
+        <Box sx={{ backgroundColor: 'primary.main', padding: 3, mt: 12 }}>
             <Stack direction='row' spacing={{ xs: 1, sm: 4 }} justifyContent='center'>
                 <Typography
                     variant="h6"

@@ -8,8 +8,8 @@ const Layout = () => {
     return (
         <Stack
             maxWidth={'xl'}
-            direction='row'
-            spacing={4}
+            direction={{ xs: 'column', md: 'row' }}
+            spacing={{ xs: 0, md: 4 }}
             mx='auto'
             p={1}
         >

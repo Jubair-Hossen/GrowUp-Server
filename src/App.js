@@ -10,6 +10,7 @@ import Layout from "./pages/AdminDeshboard/Layout";
 import Overview from "./pages/AdminDeshboard/Overview/Overview";
 import Categories from "./pages/AdminDeshboard/Category/Categories";
 import AddCategory from "./pages/AdminDeshboard/Category/AddCategory";
+import AllCategories from "./pages/AdminDeshboard/Category/AllCategories";
 
 export const ColorModeContext = React.createContext();
 
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
             path: "/Admin/Categories",
             element: <Categories />,
             children: [
+              {
+                path: "/Admin/Categories",
+                element: <AllCategories />
+              },
               {
                 path: "/Admin/Categories/add-new",
                 element: <AddCategory />

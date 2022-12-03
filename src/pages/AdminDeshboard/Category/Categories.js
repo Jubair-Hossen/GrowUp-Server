@@ -5,7 +5,7 @@ import { AddBox, Category } from '@mui/icons-material';
 
 const Categories = () => {
     return (
-        <Box width={{ xs: '70%', md: '80%' }}>
+        <Box width={{ xs: '100%', md: '80%' }}>
             <Stack
                 spacing={1}
                 direction='row'

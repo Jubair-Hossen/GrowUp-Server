@@ -12,7 +12,7 @@ const SideBar = () => {
     return (
         <Box width={{ xs: '30%', md: '20%' }}
             minHeight={'80vh'}
-            sx={{ backgroundColor: 'background.default', p: 2, borderRadius: 3 }}
+            sx={{ backgroundColor: 'background.default', p: 2, borderRadius: 3, display: { xs: 'none', md: 'block' } }}
         >
             <Stack
                 direction='row'
