@@ -42,17 +42,17 @@ const AddCategory = () => {
                 my={2}
                 variant='h5'
                 to='/Admin/Categories/add-new'
-                sx={{ color: 'text.primary', textDecoration: 'none' }}
+                sx={{ color: 'text.primary', fontSize: '16px', textDecoration: 'none' }}
             >
                 Add New Category
             </Typography>
             <form onSubmit={handleSubmit}>
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={7}>
-                        <Typography sx={{ color: 'text.primary', display: 'block', mb: 1 }} component={'label'}>Name</Typography>
+                        <Typography sx={{ color: 'text.primary', fontSize: '12px', display: 'block', mb: 1 }} component={'label'}>Name</Typography>
                         <TextField fullWidth name='name' color='primary' size='small' variant="outlined" />
 
-                        <Typography sx={{ color: 'text.primary', display: 'block', my: 1 }} component={'label'}>Description</Typography>
+                        <Typography sx={{ color: 'text.primary', fontSize: '12px', display: 'block', my: 1 }} component={'label'}>Description</Typography>
                         <TextField
                             multiline
                             minRows={5}
@@ -61,7 +61,7 @@ const AddCategory = () => {
                             fullWidth color='primary' size='small' variant="outlined" />
                     </Grid>
                     <Grid item xs={12} md={5}>
-                        <Typography component='label'>Category Image</Typography>
+                        <Typography sx={{ fontSize: '12px', }} component='label'>Category Image</Typography>
                         <Box
                             sx={{
                                 mt: 1,
